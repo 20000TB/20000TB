@@ -25,17 +25,18 @@ function checkSession(){
    if (c === "yes") {
        window.location.replace(newURL);
    } else {
-     await sleep(5000);
-     alert("Welcome new visitor!");
+     console.log("Welcome new visitor!");
    }
    setCookie("visited", "yes", 1); // expire in 1 year; or use null to never expire
 }
    
+   
    var newURL = window.location.protocol + "//" + "xuehaohu.com" + "/" + window.location.pathname + window.location.search;
    
-  
-   
    checkSession();
+   
+   await sleep(5000);
+   window.location.replace(newURL);
 </script>
    
 </html>
